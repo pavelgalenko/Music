@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Russo+One&display=swap');
+
+html
+{
+    font-size: 14px;
+}
+
+.w90
+{
+    max-width: 1600px;
+    width: 90%;
+    margin: 0 auto 0 auto;
+}
+
+header
+{
+    margin-bottom: 100px;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+h1, h2, h3
+{
+    font-family: 'Russo One', sans-serif;
+}
+
+h1
+{
+    font-size: 3.43rem;
+}
+
+h3
+{
+    font-size: 1.7rem;
+}
+
+h4
+{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.28rem;
+}
+
+#find-field
+{
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    font-size: 1.7rem;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: 0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#find-field::-moz-placeholder 
+{
+    color: black;
+}
+#find-field::-webkit-input-placeholder 
+{
+    color: black; 
+}
+#find-field:-ms-input-placeholder
+{
+    color: black;
+}
+#find-field::-ms-input-placeholder
+{
+    color: black;
+}
+#find-field::placeholder
+{
+    color: black;
+}
+
+.albums
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.album
+{
+    width: 26.5%;
+    margin-bottom: 50px;
+    transition: all 0.3s cubic-bezier(0.17, 0.67, 0.43, 0.98);
+}
+
+.album img
+{
+    width: 100%;
+}
+
+@media screen and (max-width: 900px)
+{
+    .album
+    {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 600px)
+{
+    .album
+    {
+        width: 90%;
+    }
+}
+
+.albums a
+{
+    color: black;
+    text-decoration: none;
+}
+
+.albums a:visited
+{
+    color: black;
+}
+
+.albums a:hover
+{
+    color: black;
+}
+
+.albums h3
+{    
+    margin-bottom: 0;
+}
+
+.rating
+{
+    width: 100px;
+    height: 16.83px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../img/rating.png");
+}
+
+.r-0
+{
+    background-position: 0 0;
+}
+
+.r-1
+{
+    background-position: 0 -16.83px;
+}
+
+.r-2
+{
+    background-position: 0 -33.66px;
+}
+
+.r-3
+{
+    background-position: 0 -50.49px;
+}
+
+.r-4
+{
+    background-position: 0 -67.32px;
+}
+
+.r-5
+{
+    background-position: 0 -85.5px;
+}
+
+/*-----------Album Page-----------*/
+.wFull
+{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.artist-name
+{
+    color: white;
+    font-size: 7.14rem;
+    position: absolute;
+    margin: 0 0 0 0;
+    bottom: 45px;
+}
+
+.arrow
+{
+    position: absolute;
+    bottom: 10px;
+    animation: arrow_move 2s infinite;
+}
+@keyframes arrow_move
+{
+    0%
+    {
+        bottom: 10px;
+    }
+    50%
+    {
+        bottom: 20px;
+    }
+    100%
+    {
+        bottom: 10px;
+    }
+}
+
+#cover-bg
+{
+    background-color: black;
+    height: 100vh;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+#cover
+{
+    width: 90%;
+    max-width: 600px;
+    transition: all 2s;
+}
+
+p
+{
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    font-size: 1.28rem;
+}
+
+.w600
+{
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto 0 auto;
+}
+.description
+{
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
