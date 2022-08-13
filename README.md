@@ -1,1 +1,1 @@
-# Main page of music site with covers of albums and ratings. And album page with description of an artist and cover with box-shadow with animation.
+# Main page of music site with covers of albums, titles, ratings and artists name. Also album page with description of an artist and cover of an album with animation.
