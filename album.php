@@ -1,3 +1,20 @@
+<?php
+    require_once('connection.php');
+    $albumID = htmlspecialchars($_GET[id]);
+    if ($albumID == '')
+    {
+        header('Location: index.php');
+    }
+    else
+    {
+    $query = $connection -> query("SELECT albums.id, albums.title, albums.rating, albums.cover, artists.name, artists.description FROM albums 
+        JOIN artists ON albums.id_artist = artists.id
+        WHERE albums.id = $albumID"
+    );
+    $row = $query -> fetch_assoc();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,17 +26,14 @@
 </head>
 <body class="wFull">
     <div id="cover-bg">
-        <img id="cover" src="img/covers/chinese.jpeg" alt="Here was a picture"/>
-        <h2 class="artist-name">Chinese Football</h2>
+        <img id="cover" src="img/covers/<?php echo $row[cover];?>" alt="Here was a picture"/>
+        <h2 class="artist-name"><?php echo $row[name];?></h2>
         <img class="arrow" src="img/angle-down-solid.png" alt="arrow"/>
     </div>
     <div class="w600">
-        <h1>Chinese Football</h1>
+        <h1><?php echo $row[name];?></h1>
         <p class="description">
-            Emo/indie band from Wuhan, China. Current members:
-            <br>徐波 - 主唱吉他 (Xu Bo - vocals/guitar)
-            <br>王博 - 主音吉他 (Wang Bo - guitar)
-            <br>李立鑫 - 贝司 (Li Lixin - bass/backing vocals).
+            <?php echo $row[description];?>
         </p>
     </div>    
 </body>
