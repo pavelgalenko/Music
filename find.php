@@ -2,9 +2,9 @@
     require_once('connection.php');
     $answer=array(); //array for answer
 
-    if(isset($_POST[find_text])) //check variable !=null
+    if(isset($_POST[findText])) //check variable !=null
     {
-        $ft = htmlspecialchars($_POST[find_text]);
+        $ft = htmlspecialchars($_POST[findText]);
 
         $query = $connection -> query("SELECT albums.id, albums.title, albums.rating, albums.cover, artists.name
             FROM albums 

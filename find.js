@@ -5,11 +5,11 @@ window.addEventListener('load', function(){
 
 function findAlbums()
 {
-    var findText = document.querySelector('#find-field').value; //init var from find field on index.php
-    findText = encodeURIComponent(findText); //encode var in URI
+    var find_text = document.querySelector('#find-field').value; //init var from find field on index.php
+    find_text = encodeURIComponent(find_text); //encode in URI
     var xhr = new XMLHttpRequest(); //create XMLHttpRequest
     xhr.open('POST', 'find.php'); //choose method and file for xhr
-    xhr.setRequestHeader('Content-Type', 'application-www-form-urlencoded'); //set content type
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded'); //set content type
 
     xhr.onreadystatechange = function()
     {
@@ -42,4 +42,5 @@ function findAlbums()
             }
         }
     }
+    xhr.send('find_text='+find_text); //send a request
 }

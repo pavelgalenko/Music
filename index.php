@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <link href="css/style.css" rel="stylesheet">
+    <script src="find.js"></script>
     <title>Music</title>
 </head>
 <body class="w90">
