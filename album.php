@@ -7,12 +7,12 @@
     }
     else
     {
-    $query = $connection -> query("SELECT albums.id, albums.title, albums.rating, albums.cover, artists.name, artists.description FROM albums 
+    $query = $connection -> query("SELECT albums.id, albums.title, albums.rating, albums.cover, artists.name, artists.description 
+        FROM albums 
         JOIN artists ON albums.id_artist = artists.id
-        WHERE albums.id = $albumID"
-    );
+        WHERE albums.id = $albumID");
     $row = $query -> fetch_assoc();
-}
+    }
 ?>
 
 <!DOCTYPE html>
@@ -32,9 +32,7 @@
     </div>
     <div class="w600">
         <h1><?php echo $row[name];?></h1>
-        <p class="description">
-            <?php echo $row[description];?>
-        </p>
+        <p class="description"> <?php echo $row[description];?> </p>
     </div>    
 </body>
 </html>
