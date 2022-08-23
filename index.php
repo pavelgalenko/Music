@@ -12,24 +12,6 @@
     <div>
         <input id="find-field" type="text" placeholder="Поиск">
     </div>
-    <div id="albums" class="albums">
-        <?php while($row = $query -> fetch_assoc())
-        { ?>
-            <div class="album">
-                <div class="album-image">
-                    <a href="album.php?id=<?php echo $row[id];?>">
-                        <img src="img/covers/<?php echo $row[cover];?>" alt="album-image"/>
-                    </a>
-                </div>
-                <div class="rating r-<?php echo $row[rating];?>"></div>
-                <h3>
-                    <a href="album.php?id=<?php echo $row[id];?>"><?php echo $row[title];?></a>
-                </h3>
-                <h4>
-                    <a href="#"><?php echo $row[name];?></a>
-                </h4>
-            </div>
-        <?php } ?>
-    </div>    
+    <div id="albums" class="albums"></div>    
 </body>
 </html>
