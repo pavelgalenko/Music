@@ -13,11 +13,11 @@ function findAlbums()
 
     xhr.onreadystatechange = function()
     {
-        if(xhr.readyState === 4 && xhr.status === 200)
+        if(xhr.readyState === 4 && xhr.status === 200) //check the request is ok
         {
-            var answer = JSON.parse(xhr.responseText);
-            var readyBlock = '';
-            if(answer.length > 0)
+            var answer = JSON.parse(xhr.responseText); //parse the answer from server
+            var readyBlock = ''; //var for output
+            if(answer.length > 0) //make output if answer in not empty
             {
                 for(const item of answer)
                 {
@@ -38,7 +38,7 @@ function findAlbums()
                     </div>
                     `;
                 }
-                document.querySelector('#albums').innerHTML=readyBlock; //output of readyblock
+                document.querySelector('#albums').innerHTML=readyBlock; //add row inside the block 'albums' and output on the page 
             }
         }
     }
