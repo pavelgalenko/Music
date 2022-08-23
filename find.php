@@ -12,7 +12,7 @@
             WHERE albums.title LIKE '%$ft%'"
         );
         
-        while($row = $query -> fetch_assoc())
+        while($row = $query -> fetch_assoc())//add data from $row in array
         {
             $answer[] = $row;
         }
