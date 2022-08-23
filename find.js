@@ -37,8 +37,7 @@ function findAlbums()
                 </div>
                 `;
             }
-            document.querySelector('#albums').innerHTML=readyBlock; //add row inside the block 'albums' and output on the page 
-            
+            document.querySelector('#albums').innerHTML=readyBlock; //add row inside the block 'albums' and output on the page
         }
     }
     xhr.send('findText='+findText); //send a request

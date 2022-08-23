@@ -13,6 +13,6 @@
     <div>
         <input id="find-field" type="text" placeholder="Поиск">
     </div>
-    <div id="albums" class="albums"></div>    
+    <div id="albums" class="albums"></div>
 </body>
 </html>
