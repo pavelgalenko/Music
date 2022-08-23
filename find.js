@@ -17,29 +17,28 @@ function findAlbums()
         {
             var answer = JSON.parse(xhr.responseText); //parse the answer from server
             var readyBlock = ''; //var for output
-            if(answer.length > 0) //make output if answer in not empty
+            
+            for(const item of answer)
             {
-                for(const item of answer)
-                {
-                    readyBlock += `
-                    <div class="album">
-                        <div class="album-image">
-                            <a href="album.php?id=${item.id}">
-                                <img src="img/covers/${item.cover}" alt="album-image"/>
-                            </a>
-                        </div>
-                        <div class="rating r-${item.rating}"></div>
-                        <h3>
-                            <a href="album.php?id=${item.id}">${item.title}</a>
-                        </h3>
-                        <h4>
-                            <a href="#">${item.name}</a>
-                        </h4>
+                readyBlock += `
+                <div class="album">
+                    <div class="album-image">
+                        <a href="album.php?id=${item.id}">
+                            <img src="img/covers/${item.cover}" alt="album-image"/>
+                        </a>
                     </div>
-                    `;
-                }
-                document.querySelector('#albums').innerHTML=readyBlock; //add row inside the block 'albums' and output on the page 
+                    <div class="rating r-${item.rating}"></div>
+                    <h3>
+                        <a href="album.php?id=${item.id}">${item.title}</a>
+                    </h3>
+                    <h4>
+                        <a href="#">${item.name}</a>
+                    </h4>
+                </div>
+                `;
             }
+            document.querySelector('#albums').innerHTML=readyBlock; //add row inside the block 'albums' and output on the page 
+            
         }
     }
     xhr.send('findText='+findText); //send a request
