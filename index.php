@@ -1,9 +1,3 @@
-<?php
-    require_once('connection.php'); //connect to database
-    $query = $connection -> query("SELECT albums.id, albums.title, albums.rating, albums.cover, artists.name FROM albums 
-        JOIN artists ON albums.id_artist = artists.id");
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
