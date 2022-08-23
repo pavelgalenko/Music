@@ -9,7 +9,7 @@
         $query = $connection -> query("SELECT albums.id, albums.title, albums.rating, albums.cover, artists.name
             FROM albums 
             JOIN artists ON albums.id_artist = artists.id
-            WHERE albums.title LIKE '%$ft%'"
+            WHERE albums.title LIKE '%$ft%' OR artists.name LIKE '%$ft%'"
         );
         
         while($row = $query -> fetch_assoc())//add data from $row in array
